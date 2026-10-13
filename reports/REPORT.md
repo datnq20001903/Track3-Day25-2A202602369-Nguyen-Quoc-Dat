@@ -1,3 +1,6 @@
+Commit: 5919023bc84d177a753458643d554c200a273e16
+Họ tên / nhóm: Nguyễn Quốc Đạt — MSV 2A202602369
+
 # Lab 25B — Game Day report
 
 **Học viên:** Nguyễn Quốc Đạt — 2A202602369. **Ngày:** 13/10/2026.

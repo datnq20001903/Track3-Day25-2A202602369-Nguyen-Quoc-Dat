@@ -1,6 +1,7 @@
 """Build the report from recorded public-run artifacts (does not rerun experiments)."""
 from pathlib import Path
 import json
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 def read(path):
@@ -15,7 +16,8 @@ exp = read("reports/experiments/part_f.json")
 cache = {c: read(f"reports/cache/{c}.json")["C1_faq_outage"] for c in ("resilient", "cached")}
 w = read("reports/workflows.json")
 slo = read("reports/slo.json")
-sections = ["""# Lab 25B — Game Day report
+commit = subprocess.check_output(["git", "rev-parse", "5919023"], cwd=ROOT, text=True).strip()
+sections = [f"Commit: {commit}\nHọ tên / nhóm: Nguyễn Quốc Đạt — MSV 2A202602369\n\n" + """# Lab 25B — Game Day report
 
 **Học viên:** Nguyễn Quốc Đạt — 2A202602369. **Ngày:** 13/10/2026.
 
